@@ -11,7 +11,7 @@
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = (import systems);
       perSystem = { config, self', inputs', pkgs, system, ... }: {
-        devShells.devault = pkgs.mkShell {
+        devShells.default = pkgs.mkShell {
           # packages needed for building the software in this repo
           nativeBuildInputs = with pkgs; [];
           # packages needed at runtime for running software in this repo
